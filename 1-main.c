@@ -13,6 +13,7 @@ int main(void)
 
     root = binary_tree_node(NULL, 98);
     root->left = binary_tree_node(root, 12);
+    root->left->left = binary_tree_node(root->left, 77);
     root->right = binary_tree_node(root, 402);
     binary_tree_print(root);
     printf("\n");
