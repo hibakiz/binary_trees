@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+#include <limits.h>
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -58,5 +60,6 @@ void levelorder_help(const binary_tree_t *tree, void (*func)(int), int level);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 int binary_tree_height2(const binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
-
+bool best_helper(const binary_tree_t *tree, int min, int max);
+int binary_tree_is_bst(const binary_tree_t *tree);
 #endif
