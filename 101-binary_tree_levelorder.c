@@ -63,7 +63,7 @@ size_t get_height(const binary_tree_t *tree)
  *
  * Return: maximum
  */
-size_t max(int l, int r)
+size_t max(size_t l, size_t r)
 {
 	return (l > r ? l : r);
 }
