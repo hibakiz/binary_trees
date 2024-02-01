@@ -9,14 +9,14 @@
  */
 bool best_helper(const binary_tree_t *tree, int min, int max)
 {
-    if (tree == NULL)
-        return true;
+	if (tree == NULL)
+		return (true);
 
-    if (tree->n < min || tree->n > max)
-        return false;
+	if (tree->n < min || tree->n > max)
+		return (false);
 
-    return best_helper(tree->left, min, tree->n - 1) &&
-           best_helper(tree->right, tree->n + 1, max);
+	return (best_helper(tree->left, min, tree->n - 1) &&
+			best_helper(tree->right, tree->n + 1, max));
 }
 
 /**
@@ -26,8 +26,8 @@ bool best_helper(const binary_tree_t *tree, int min, int max)
  */
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
-    if (tree == NULL)
-        return 0;
+	if (tree == NULL)
+		return (0);
 
-    return best_helper(tree, INT_MIN, INT_MAX);
+	return (best_helper(tree, INT_MIN, INT_MAX));
 }
