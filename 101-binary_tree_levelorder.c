@@ -48,6 +48,7 @@ int binary_tree_height2(const binary_tree_t *tree)
 		return (0);
 
 	int l, r;
+
 	l = tree->left ? 1 + binary_tree_height2(tree->left) : 0;
 	r = tree->right ? 1 + binary_tree_height2(tree->right) : 0;
 
