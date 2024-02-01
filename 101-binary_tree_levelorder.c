@@ -6,7 +6,7 @@
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	size_t level, max_level;
+	int level, max_level;
 
 	if (!tree || !func)
 		return;
@@ -24,7 +24,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
  * @level: Current level in tree
  */
 void levelorder_help(const binary_tree_t *tree,
-					 void (*func)(int), size_t level)
+					 void (*func)(int), int level)
 {
 	if (level == 1)
 		func(tree->n);
@@ -42,12 +42,12 @@ void levelorder_help(const binary_tree_t *tree,
  * @tree: pointer to the root node of the tree to measure the height.
  * Return: hight otherwise,  0 if it is NULL.
  */
-size_t binary_tree_height2(const binary_tree_t *tree)
+int binary_tree_height2(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
 
-	size_t l, r;
+	int l, r;
 	l = tree->left ? 1 + binary_tree_height2(tree->left) : 0;
 	r = tree->right ? 1 + binary_tree_height2(tree->right) : 0;
 
@@ -61,7 +61,7 @@ size_t binary_tree_height2(const binary_tree_t *tree)
  *
  * Return: maximum
  */
-size_t max(size_t l, size_t r)
+int max(int l, int r)
 {
 	return (l > r ? l : r);
 }
