@@ -73,6 +73,7 @@ int complete(const binary_tree_t *tree);
 int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
 size_t tree_size(const binary_tree_t *tree);
 int binary_tree_is_complete(const binary_tree_t *tree);
-int bhelper_comple(const binary_tree_t *tree, size_t index, size_t size);
+int helper_comple(const binary_tree_t *tree, size_t index, size_t size);
+size_t tree_size(const binary_tree_t *tree);
 
 #endif
